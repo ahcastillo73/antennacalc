@@ -42,7 +42,7 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
                       "<tr><td>Factor de viento</td><td>" + windFactor.toFixed(2) + "</td><td>-</td></tr>" +
                       "<tr><td><strong>Fuerza de viento (F)</strong></td><td><strong>" + force.toFixed(2) + " N</strong></td><td>Cd·q·A·Factor</td></tr>" +
                       "</table>" +
-                      "<h3>Fórmula en LaTeX</h3>" +
+                      "<h3>Fórmula para calculo de viento</h3>" +
                       "<p style='text-align:center;'>$$F = C_d \\cdot \\left(\\frac{1}{2}\\,\\rho\\,V^2\\right) \\cdot A \\cdot \\text{factor}$$</p>";
   
   document.getElementById('results').innerHTML = breakdownHTML;
