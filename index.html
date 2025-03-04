@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Fuerza de Viento para Antena RF (TIA-222-H)</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Incluir MathJax para renderizar fórmulas en LaTeX -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Calculadora de Fuerza de Viento</h1>
+      <p>Estimación para Antena RF según TIA-222-H</p>
+    </header>
+    <main class="grid-container">
+      <!-- Columna Izquierda: Datos de Entrada -->
+      <section class="column" id="input-column">
+        <h2>Datos de Entrada</h2>
+        <form id="input-form">
+          <label for="projectName">Nombre del Proyecto:</label>
+          <input type="text" id="projectName" placeholder="Ej. Proyecto RF 01">
+          
+          <label for="projectLocation">Ubicación del Proyecto:</label>
+          <input type="text" id="projectLocation" placeholder="Ej. Ciudad, País">
+          
+          <fieldset>
+            <legend>Parámetros de la Antena y Viento</legend>
+            <label for="height">Altura de la Antena (m):</label>
+            <input type="number" id="height" step="0.1" placeholder="Ej. 10">
+            
+            <label for="width">Ancho de la Antena (m):</label>
+            <input type="number" id="width" step="0.1" placeholder="Ej. 0.5">
+            
+            <label for="azimuth">Azimut del Viento (°):</label>
+            <input type="number" id="azimuth" step="1" placeholder="Ej. 45">
+            
+            <label for="windSpeed">Velocidad del Viento (m/s):</label>
+            <input type="number" id="windSpeed" step="0.1" placeholder="Ej. 15">
+            
+            <label for="windFactor">Factor de Viento:</label>
+            <input type="number" id="windFactor" step="0.1" value="1">
+          </fieldset>
+          <button type="button" id="calculateBtn">Calcular Fuerza de Viento</button>
+          <button type="button" id="printBtn">Imprimir PDF</button>
+        </form>
+      </section>
+      <!-- Columna Central: Resultados y Cálculos -->
+      <section class="column" id="results-column">
+        <h2>Resultados y Cálculos</h2>
+        <div id="results">
+          <!-- Aquí se mostrará el desglose de los cálculos -->
+        </div>
+      </section>
+      <!-- Columna Derecha: Gráfico -->
+      <aside class="column" id="graph-column">
+        <h2>Gráfico</h2>
+        <canvas id="canvas" width="400" height="400"></canvas>
+      </aside>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
