@@ -55,7 +55,7 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
   
   // Dibujar la antena como un rectángulo fijo
   var antennaWidth = 60;   // ancho fijo
-  var antennaHeight = 150; // alto fijo
+  var antennaHeight = 30; // alto fijo
   var antennaX = (canvas.width - antennaWidth) / 2;
   var antennaY = canvas.height - antennaHeight - 20; // margen inferior
   
